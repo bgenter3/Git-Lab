@@ -1,16 +1,20 @@
-# This is a sample Python script.
+Menu_continue = True
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+while Menu_continue:
+    print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
+    menu_selection = int(input("Please enter an option: "))
+    if menu_selection == 1:
+        og_password = input("Please enter your password to encode: ")
+        encoded_password = ""
+        # iterates through digits in og_password and adds 3 to each of them
+        for digit in og_password:
+            digit = int(digit)
+            if digit >= 7:
+                digit = digit - 7
+            else:
+                digit += 3
+            encoded_password = encoded_password + str(digit)
+        print("Your password has been encoded and stored!\n")
+    if menu_selection == 3:
+        break
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
