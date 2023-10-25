@@ -1,3 +1,4 @@
+#made by Benjamin Gneter
 Menu_continue = True
 
 while Menu_continue:
@@ -15,6 +16,17 @@ while Menu_continue:
                 digit += 3
             encoded_password = encoded_password + str(digit)
         print("Your password has been encoded and stored!\n")
+    if menu_selection == 2:
+        #Made By Tyler Brodnicki
+        decoded_password = ""
+        for digit in encoded_password:
+            digit = int(digit)
+            if digit < 3:
+                digit += 7
+            else:
+                digit -= 3
+            decoded_password += str(digit)
+        print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}")
     if menu_selection == 3:
         break
 
